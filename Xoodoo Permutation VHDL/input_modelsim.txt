@@ -1,0 +1,22 @@
+vsim -gui work.xoodoo
+
+add wave sim:/xoodoo/*
+
+force -freeze sim:/xoodoo/proceed 1 0
+force -freeze sim:/xoodoo/rst 0 0
+force -freeze sim:/xoodoo/clk 1 0, 0 {50 ps} -r 100
+
+force -freeze sim:/xoodoo/in_A0(0) 00000000000000000000000000000000 0
+force -freeze sim:/xoodoo/in_A0(1) 00000000000000000000000000000000 0
+force -freeze sim:/xoodoo/in_A0(2) 00000000000000000000000000000000 0
+force -freeze sim:/xoodoo/in_A0(3) 00000000000000000000000000000000 0
+
+force -freeze sim:/xoodoo/in_A1(0) 01100111011000010110111101101110 0
+force -freeze sim:/xoodoo/in_A1(1) 00111111001111110110000101110011 0
+force -freeze sim:/xoodoo/in_A1(2) 00111001001100100011011000110011 0
+force -freeze sim:/xoodoo/in_A1(3) 01101011011110010110001001000001 0
+
+force -freeze sim:/xoodoo/in_A2(0) 01011000011001000110100101101110 0
+force -freeze sim:/xoodoo/in_A2(1) 00110100011100100101100101001000 0
+force -freeze sim:/xoodoo/in_A2(2) 00110011011100100011000001100101 0
+force -freeze sim:/xoodoo/in_A2(3) 01010011011110100101101000101110 0
