@@ -6,3 +6,6 @@ SHA-256 is one of the most secure in Hash family. As you might heard that MD4, M
 
 ## SHA-384 (Keccak)
 Keccak is winner from NIST as a Secure Hash Algorithm (SHA-3). The Algorithm is super famous, "Sponge Construction" that consist 2 big step, absorbtion and squeeze. You can try this algorithm in Python Implementation folder. In python implementation, Keccak can hash 1.2 Million bits into 384 bits in just 40 seconds.
+
+## Xoodoo Permutation
+Xoodoo Permutation is so similar with Keccak Permuatation, we simply re-arrange bits in cube 4 x 32 x 3. Xoodoo Permutation need input from SHA-256 or SHA-384 and will permutatate and resulting 384 bits.
